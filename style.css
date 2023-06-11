@@ -1,0 +1,293 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #172a3a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+header {
+  /* min-height: 40vh; */
+  background-color: #fff874;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head-container {
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+
+}
+
+/* .img-logo {
+  width: 15%;
+  height: auto;
+  padding: 10px;
+} */
+
+.img-logo img {
+  width: 70px;
+
+}
+
+.head-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+
+
+}
+
+h1 {
+  margin: 0px;
+  /* color: rgb(32, 35, 41); */
+  border: none;
+  font-weight: 900;
+  z-index: 1;
+  font-size: 5.625rem;
+  color: #2e4057;
+  text-align: center;
+}
+
+h2 {
+  font-size: xx-large;
+  text-decoration: overline;
+  color: #2e4057;
+}
+
+.text-color {
+  font-weight: 900;
+  color: #4b83cb;
+  font-size: large;
+}
+
+h4 {
+  font-weight: 900;
+
+  color: #9b488e;
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  color: #2e4057;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  color: #2e4057;
+}
+
+.navigation {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+body {
+  background-image: url("./assets/wp1822739-rick-and-morty-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* overflow: scroll; */
+  overflow-x: hidden;
+}
+
+.text-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5rem 2rem 2rem;
+  gap: 3rem;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  border-radius: 30px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: center;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 30px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #E8E0B6;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 30px;
+}
+
+/* BOTONES */
+
+.css-button-arrow--blue-prev {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #4b83cb
+}
+
+.css-button-arrow--blue-prev:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+
+.css-button-arrow--blue-prev:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.css-button-arrow--blue-prev:after {
+  content: "\00AB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+
+.css-button-arrow--blue-next {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #4b83cb
+}
+
+.css-button-arrow--blue-next:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+
+.css-button-arrow--blue-next:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+.css-button-arrow--blue-next:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.footer-container {
+  background-color: var(--rc-color-n-050);
+  height: auto;
+
+}
+
+.container-copyright i {
+  color: #FC779A;
+}
+
+.container-copyright {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  color: var(--rc-color-n-200);
+  padding: 10px;
+}
